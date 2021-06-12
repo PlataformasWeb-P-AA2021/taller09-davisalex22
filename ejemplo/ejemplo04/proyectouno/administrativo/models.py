@@ -5,7 +5,7 @@ from django.db import models
 class Estudiante(models.Model):
     
     class Meta:
-        ordering = ["tipo_estudiante"]
+        ordering = ["tipo_estudiante","nombre"]
         verbose_name_plural = "Los Estudiantes"
     
     opciones_tipo_estudiante = (
@@ -31,7 +31,11 @@ class Estudiante(models.Model):
                 self.tipo_estudiante)
 
 
-class Modulo(models.Model):
+class Modulo(models.Model): 
+    class Meta:
+       
+        verbose_name_plural = "Los Modulos" 
+ 
     """
     """
     opciones_modulo = (
